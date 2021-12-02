@@ -493,20 +493,15 @@ padding-left: 0px;
     margin-bottom: 30px;
 }
 
-.checkbox-form {
-    margin: 0px;
-    margin-right: 8.38px;
-
-    width: 16px;
-    height: 15px;
-}
-
 .checkbox-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #757575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-link {
@@ -516,6 +511,57 @@ padding-left: 0px;
 
 textarea {
     resize: none;
+}
+
+.span-check {
+    position: relative;
+
+    display: inline-block;
+    align-items: center;
+}
+
+.icon-check {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.checkbox-form:checked + .icon-check {
+    background-color: #2196F3;
+    border-radius: 2px;
+    background-image: url('../images3/icon.svg');
+    background-size: contain;
+    background-origin: border-box;
+
+}
+
+.checkbox-form {
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.checkbox-form {
+    margin: 0px;
+    margin-right: 8.38px;
+
+    width: 16px;
+    height: 15px; 
+    cursor: pointer;
+
+    display: block;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Секція 2. Переваги */
@@ -1006,14 +1052,6 @@ border-left: 1px solid #eeeeee;
 
 
 /* Секція 4. Постійні клієнти */
-
-.clients-section {
-
-}
-
-.clients-div {
-
-}
 
 .clients-title {
     font-weight: 700;
